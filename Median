@@ -1,0 +1,21 @@
+// write a function to return median from a sorted array
+
+public class Median{
+    public static double median(int[]arr){
+        int n=arr.length;
+        int m=n/2;
+        if(n%2==0){
+            return (arr[m-1]+arr[m])/2.0;
+        }
+        else{
+            return arr[m];
+        }
+    }
+    public static void main (String[]args){
+        int[] arr1={1,2,3,4};
+        int[] arr2={1,2,3};
+        System.out.println("Median:"+median(arr1));
+        System.out.println("Median:"+median(arr2));
+
+    }
+}
