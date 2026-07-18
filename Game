@@ -1,0 +1,30 @@
+// write a java function that returns true if the character returns to the origin after it finishes all of its moves, or false otherwise.
+
+import java.util.Scanner;
+public class Game{
+    static int x=0; //to be accesses everywhere
+    static int y=0;
+    public static boolean Position(String moves){
+        for (char move:moves.toCharArray()){
+            if(move=='L'|| move=='l'){
+                x--;
+              }
+           else if(move=='R'|| move=='r'){
+                x++;}
+           else if(move=='U'|| move=='u'){
+                y++;}
+           else if(move=='D'|| move=='d'){
+                y--;
+           }
+           else{
+           System.out.println("Invalid input"); }
+        }
+    return x==0 && y==0;
+    }
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    String movement=sc.nextLine();
+    System.out.println("The robot is on origin: "+ Position(movement));
+    
+}
+}
