@@ -1,0 +1,31 @@
+// Write a Java program to calculate the total electricity bill for a customer based on the total number of units consumed.
+
+
+import java.util.Scanner;
+public class Electricity{
+    public static double Bill(int unit){
+        if(unit > 0 && unit<=100){
+            return unit*15;
+        }
+        else if (unit>100 && unit<=300){
+            return unit*25;
+        }
+        else if (unit>300 && unit<=500){
+            return unit*35;
+        }
+        else if (unit>500){
+            return unit*50;
+        }
+        else{
+           return 0;
+        }
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int units=sc.nextInt();
+        System.out.println("Your bill according to your units is"+ Bill(units));
+
+
+    }
+
+}
