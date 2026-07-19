@@ -1,0 +1,21 @@
+//   Return the wealth that the richest customer has.
+
+public class Wealth{
+    public static int wealthy(int[][]acc){
+        int max_wealth=0;
+        for(int i=0; i<acc.length;i++){
+            int wealth=0;
+             for(int j=0;j<acc[i].length;j++){
+                wealth=wealth+acc[i][j];   }
+        if(wealth>max_wealth){
+            max_wealth=wealth;
+        }
+        }
+       return max_wealth;
+    }
+    public static void main(String[]args){
+        int[][]acc1={{1,2,3},{4,5,1},{1,2,7}};
+       System.out.println("The wealthiest one is "+ wealthy(acc1));
+
+    }
+}
